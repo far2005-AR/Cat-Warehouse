@@ -1,0 +1,1472 @@
+/* ===== CUSTOM FONTS - LOCAL FILES ===== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts:/montserrat.semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts:/montserrat.extrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Laquer';
+    src: url('./fonts:/Lacquer-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Fors';
+    src: url('./fonts:/TT_Fors_Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Fors';
+    src: url('./fonts:/TT_Fors_Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== FONT APPLICATIONS ===== */
+.logo-text {
+    font-family: 'Laquer', cursive;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: var(--brown-deep);
+    text-shadow: 2px 2px 0 var(--bg-sand);
+}
+
+h1, h2, h3, h4, h5, h6,
+.nav-link,
+.section-title,
+.page-title,
+button,
+.view-btn,
+.carousel-controls button,
+.receipt-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brown-deep);
+}
+
+/* Subheadings or less important headers */
+h4, h5, h6, .section-subtitle {
+    font-weight: 600;
+}
+
+body, p, div, span, a, li, input, select, textarea,
+.game-title, .game-meta, .rating, .price,
+.cart-item, .wishlist-item, .receipt-content,
+.receipt-info, .receipt-footer, .specs p,
+.review, .game-description, .empty-state p {
+    font-family: 'TT Fors', monospace;
+    font-weight: normal;
+    color: var(--text-dark);
+}
+
+strong, b, .bold, .nav-link.active, 
+.game-price, .total, .grand-total,
+.cart-summary strong, .receipt-totals .grand-total {
+    font-family: 'TT Fors', monospace;
+    font-weight: bold;
+    color: var(--brown-deep);
+}
+
+/* ===== CAT_WAREHOUSE COLOUR PALETTE ===== */
+:root {
+    --bg-sand: #c3b9a0;
+    --container-teal: #4e736d;
+    --pop-peach: #e5a985;
+    --brown-dark: #494238;
+    --brown-deep: #2a1b14;
+    --text-dark: #2a1b14;
+    --text-light: #c3b9a0;
+    --shadow: rgba(42, 27, 20, 0.2);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-sand);
+    color: var(--text-dark);
+    font-family: 'TT Fors', monospace;
+    font-weight: normal;
+    line-height: 1.6;
+    background-image: 
+        linear-gradient(rgba(78, 115, 109, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(78, 115, 109, 0.02) 1px, transparent 1px),
+        repeating-radial-gradient(circle at 10% 20%, rgba(42, 27, 20, 0.02) 0px, transparent 5px),
+        repeating-radial-gradient(circle at 90% 70%, rgba(42, 27, 20, 0.02) 0px, transparent 8px),
+        repeating-radial-gradient(circle at 30% 80%, rgba(229, 169, 133, 0.01) 0px, transparent 10px),
+        repeating-radial-gradient(circle at 70% 30%, rgba(229, 169, 133, 0.01) 0px, transparent 12px);
+    background-size: 30px 30px, 30px 30px, 200px 200px, 200px 200px, 300px 300px, 300px 300px;
+    background-repeat: repeat;
+}
+
+/* ===== FONT APPLICATIONS ===== */
+.logo-text {
+    font-family: 'Laquer', cursive;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: var(--brown-deep);
+    text-shadow: 2px 2px 0 var(--bg-sand);
+}
+
+h1, h2, h3, h4, h5, h6,
+.nav-link,
+.section-title,
+.page-title,
+button,
+.view-btn,
+.carousel-controls button,
+.receipt-header h2 {
+    font-family: 'Mont', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brown-deep);
+}
+
+/* TT Fors - EVERYTHING ELSE */
+body, p, div, span, a, li, input, select, textarea,
+.game-title, .game-meta, .rating, .price,
+.cart-item, .wishlist-item, .receipt-content,
+.receipt-info, .receipt-footer, .specs p,
+.review, .game-description, .empty-state p {
+    font-family: 'TT Fors', monospace;
+    font-weight: normal;
+    color: var(--text-dark);
+}
+
+/* TT Fors Bold */
+strong, b, .bold, .nav-link.active, 
+.game-price, .total, .grand-total,
+.cart-summary strong, .receipt-totals .grand-total {
+    font-family: 'TT Fors', monospace;
+    font-weight: bold;
+    color: var(--brown-deep);
+}
+
+/* ===== CART & WISHLIST GAME TITLES IN LAQUER ===== */
+.cart-item-info h3,
+.wishlist-item-info h3 {
+    font-family: 'Laquer', cursive;
+    font-size: 1.3rem;
+    color: var(--bg-sand);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* ===== CRT SCANLINE  ===== */
+.crt-scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(229, 169, 133, 0.35) 2px,
+        rgba(229, 169, 133, 0.35) 3px
+    );
+    pointer-events: none;
+    z-index: 9998;
+    animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* ===== CAT PAW TRAILS  ===== */
+.cart-item,
+.wishlist-item,
+.empty-state,
+#cart-summary {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main walking trail - staggered paws */
+.cart-item::before,
+.wishlist-item::before,
+.empty-state::before,
+#cart-summary::before {
+    content: '🐾    🐾    🐾    🐾    🐾';
+    position: absolute;
+    font-size: 2rem;
+    color: var(--brown-deep);
+    opacity: 0.45;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    animation: cat-walk 18s linear infinite;
+    width: 100%;
+    letter-spacing: 15px;  
+    text-shadow: 1px 1px 0 var(--pop-peach);
+    filter: drop-shadow(0 0 2px var(--pop-peach));
+}
+
+/* Different positions for each container */
+.cart-item::before {
+    top: 15%;
+    left: -100px;
+    transform: rotate(-1deg);
+    animation-duration: 22s;
+}
+
+.wishlist-item::before {
+    top: 45%;
+    left: -150px;
+    transform: rotate(2deg);
+    animation-duration: 25s;
+}
+
+.empty-state::before {
+    top: 30%;
+    left: -200px;
+    transform: rotate(0deg);
+    animation-duration: 28s;
+    opacity: 0.35;
+}
+
+#cart-summary::before {
+    top: 25%;
+    left: -120px;
+    transform: rotate(1deg);
+    animation-duration: 20s;
+}
+
+/* Second cat (follows behind) */
+.cart-item::after,
+.wishlist-item::after,
+.empty-state::after,
+#cart-summary::after {
+    content: '   🐾   🐾   🐾   🐾';
+    position: absolute;
+    font-size: 1.6rem;
+    color: var(--brown-deep);
+    opacity: 0.3;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    animation: cat-follow 22s linear infinite;
+    letter-spacing: 12px;
+    filter: blur(0.2px);
+}
+
+.cart-item::after {
+    top: 35%;
+    left: -80px;
+    transform: rotate(-3deg);
+    animation-duration: 24s;
+    animation-delay: 3s;
+}
+
+.wishlist-item::after {
+    top: 65%;
+    left: -120px;
+    transform: rotate(1deg);
+    animation-duration: 27s;
+    animation-delay: 4s;
+}
+
+.empty-state::after {
+    top: 50%;
+    left: -180px;
+    transform: rotate(-2deg);
+    animation-duration: 30s;
+    animation-delay: 5s;
+    opacity: 0.25;
+}
+
+#cart-summary::after {
+    top: 45%;
+    left: -100px;
+    transform: rotate(2deg);
+    animation-duration: 23s;
+    animation-delay: 3.5s;
+}
+
+@keyframes cat-walk {
+    0% {
+        transform: translateX(0) rotate(-1deg);
+        opacity: 0.1;
+    }
+    5% {
+        opacity: 0.45;
+    }
+    20% {
+        transform: translateX(30%) rotate(0deg);
+    }
+    40% {
+        transform: translateX(60%) rotate(1deg);
+    }
+    60% {
+        transform: translateX(80%) rotate(0deg);
+    }
+    80% {
+        transform: translateX(90%) rotate(-1deg);
+        opacity: 0.35;
+    }
+    100% {
+        transform: translateX(calc(100% + 200px)) rotate(0deg);
+        opacity: 0.05;
+    }
+}
+
+@keyframes cat-follow {
+    0% {
+        transform: translateX(0) rotate(1deg);
+        opacity: 0.05;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    30% {
+        transform: translateX(30%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(60%) rotate(-1deg);
+    }
+    70% {
+        transform: translateX(80%) rotate(1deg);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateX(calc(100% + 250px)) rotate(0deg);
+        opacity: 0.02;
+    }
+}
+
+/* Make game cards not have paws */
+.game-card::before,
+.game-card::after,
+.recommended-section .game-card::before,
+.recommended-section .game-card::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ===== CHEETAH LOGO ===== */
+.cheetah-sketch {
+    width: 105px;
+    height: auto;
+    filter: grayscale(30%) contrast(120%);
+    opacity: 0.9;
+    transform: scaleX(-1);  
+    margin-left: 60px;      
+    transition: all 0.2s ease;
+}
+
+.cheetah-sketch:hover {
+    transform: scaleX(-1) scale(1.05);  
+    filter: grayscale(0%);
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    background: var(--container-teal);
+    border-bottom: 6px solid var(--pop-peach);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--bg-sand);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--pop-peach);
+}
+
+.nav-link.active {
+    color: var(--pop-peach);
+    background: rgba(229, 169, 133, 0.1);
+    border: 1px solid var(--pop-peach);
+}
+
+.badge {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+    font-weight: bold;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    max-width: 1400px;
+    margin: 100px auto 50px;
+    padding: 0 2rem;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+    color: var(--brown-deep);
+    border-bottom: 6px solid var(--pop-peach);
+    padding-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    margin-top: 20px;
+    color: var(--brown-deep);
+    letter-spacing: 3px;
+}
+
+/* ===== CAROUSEL  ===== */
+.carousel {
+    position: relative;
+    background: var(--container-teal);
+    border: 2px solid var(--pop-peach);
+    margin: 2rem 0;
+    width: 100%;
+    height: 300px !important;  
+    overflow: hidden !important;
+    box-sizing: border-box;
+}
+
+.carousel-slide {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 2rem !important;
+    padding: 1.5rem 2rem !important;
+    width: 100% !important;
+    height: 300px !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: var(--container-teal);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-slide[style*="display:none"] {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.carousel-slide img {
+    width: 350px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border: 2px solid var(--pop-peach) !important;
+    flex: 0 0 350px !important;  
+    max-width: 350px !important;
+    min-width: 350px !important;
+    box-sizing: border-box;
+}
+
+.carousel-content {
+    flex: 1 1 auto !important;
+    text-align: left !important;
+    color: var(--bg-sand);
+    max-width: 400px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.carousel-content h2 {
+    font-size: 2rem !important;
+    margin: 0 0 0.5rem 0 !important;
+    padding: 0 !important;
+    color: var(--bg-sand) !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+
+.carousel-content p {
+    font-size: 1.1rem !important;
+    margin: 0 0 0.3rem 0 !important;
+    padding: 0 !important;
+    color: var(--bg-sand) !important;
+    line-height: 1.3 !important;
+}
+
+.carousel-content .price {
+    font-size: 1.8rem !important;
+    margin: 0.3rem 0 0.5rem 0 !important;
+    color: var(--pop-peach) !important;
+    font-weight: bold !important;
+}
+
+.carousel-content button {
+    background: transparent !important;
+    border: 2px solid var(--pop-peach) !important;
+    color: var(--bg-sand) !important;
+    padding: 0.5rem 1.5rem !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    margin-top: 0.3rem !important;
+    display: inline-block !important;
+    width: auto !important;
+}
+
+.carousel-controls {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    padding: 0.5rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+    margin-top: 0 !important;
+    background: transparent !important;
+}
+
+.carousel-controls button {
+    background: var(--brown-dark) !important;
+    border: 1px solid var(--pop-peach) !important;
+    color: var(--bg-sand) !important;
+    padding: 0.5rem 1.5rem !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+}
+
+.carousel-content button:hover {
+    background: var(--pop-peach) !important;
+    color: var(--brown-deep) !important;
+    border: 2px solid var(--pop-peach) !important;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.carousel-controls button:hover {
+    background: var(--pop-peach) !important;
+    color: var(--brown-deep) !important;
+    border: 1px solid var(--pop-peach) !important;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.carousel-content button,
+.carousel-controls button {
+    transition: all 0.2s ease !important;
+}
+
+/* ===== CAT PAW TRAILS  ===== */
+.carousel,
+.filters-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main cat  */
+.carousel::before {
+    content: '🐾  🐾  🐾  🐾  🐾';
+    position: absolute;
+    font-size: 2.2rem;
+    color: var(--brown-deep);
+    opacity: 0.45;  /* DARKER */
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2;
+    animation: carousel-cat 15s linear infinite;  /* FASTER */
+    top: 20%;
+    left: -150px;
+    transform: rotate(-2deg);
+    letter-spacing: 20px;
+    text-shadow: 0 0 3px var(--pop-peach);
+}
+
+/* Second cat  */
+.carousel::after {
+    content: '   🐾   🐾   🐾   🐾';
+    position: absolute;
+    font-size: 1.8rem;
+    color: var(--brown-deep);
+    opacity: 0.3;  
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2;
+    animation: carousel-follow 18s linear infinite;  
+    animation-delay: 3s;
+    bottom: 25%;
+    left: -200px;
+    transform: rotate(3deg);
+    letter-spacing: 15px;
+}
+
+/* Cats in filters section  */
+.filters-section::before {
+    content: '🐾  🐾  🐾  🐾';
+    position: absolute;
+    font-size: 1.8rem;
+    color: var(--brown-deep);
+    opacity: 0.4;  
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    animation: filter-cat 12s linear infinite;  
+    top: 15%;
+    left: -100px;
+    transform: rotate(-1deg);
+    letter-spacing: 12px;
+}
+
+.filters-section::after {
+    content: '   🐾   🐾   🐾';
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--brown-deep);
+    opacity: 0.25;  
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    animation: filter-follow 14s linear infinite;  
+    animation-delay: 2.5s;
+    bottom: 20%;
+    left: -150px;
+    transform: rotate(2deg);
+    letter-spacing: 10px;
+}
+
+@keyframes carousel-cat {
+    0% {
+        transform: translateX(0) rotate(-2deg);
+        opacity: 0.2;
+    }
+    10% {
+        opacity: 0.45;
+    }
+    50% {
+        transform: translateX(calc(100% + 100px)) rotate(1deg);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(calc(100% + 300px)) rotate(-1deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes carousel-follow {
+    0% {
+        transform: translateX(0) rotate(3deg);
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    60% {
+        transform: translateX(calc(100% + 150px)) rotate(-2deg);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateX(calc(100% + 350px)) rotate(1deg);
+        opacity: 0.05;
+    }
+}
+
+@keyframes filter-cat {
+    0% {
+        transform: translateX(0) rotate(-1deg);
+        opacity: 0.15;
+    }
+    15% {
+        opacity: 0.4;
+    }
+    55% {
+        transform: translateX(calc(100% + 80px)) rotate(0deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(calc(100% + 250px)) rotate(1deg);
+        opacity: 0.08;
+    }
+}
+
+@keyframes filter-follow {
+    0% {
+        transform: translateX(0) rotate(2deg);
+        opacity: 0.08;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    65% {
+        transform: translateX(calc(100% + 120px)) rotate(-1deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateX(calc(100% + 280px)) rotate(0deg);
+        opacity: 0.04;
+    }
+}
+
+/* ===== GAME CARDS ===== */
+.games-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+/* ===== LIST VIEW  ===== */
+.games-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.games-container.list-view .game-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--container-teal);
+    border: 3px solid var(--brown-dark);
+    padding: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.games-container.list-view .game-card img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
+    border: 3px solid var(--pop-peach);
+    border-radius: 5px;
+    flex-shrink: 0; 
+}
+
+.games-container.list-view .game-info {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.games-container.list-view .game-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.games-container.list-view .game-price {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+.games-container.list-view .game-meta {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.games-container.list-view .card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.games-container.list-view .card-actions button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+.games-container.list-view .wishlist-btn {
+    flex: 0 0 60px;
+}
+
+.game-card {
+    background: var(--container-teal);
+    border: 3px solid var(--brown-dark);
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    border-color: var(--pop-peach);
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--brown-dark);
+    cursor: pointer;
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-title {
+    font-family: 'Laquer', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--bg-sand);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.detail-wrapper h1 {
+    font-family: 'Laquer', cursive;
+    font-size: 2.5rem;
+    color: var(--bg-sand);
+    margin-bottom: 20px;
+}
+
+.game-price {
+    font-size: 1.5rem;
+    color: var(--pop-peach);
+    margin: 0.5rem 0;
+}
+
+.rating {
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+.game-meta {
+    color: var(--bg-sand);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-actions button {
+    flex: 1;
+    background: transparent;
+    border: 3px solid var(--pop-peach);
+    color: var(--bg-sand);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.card-actions button:hover {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+}
+
+.wishlist-btn {
+    flex: 0 0 50px;
+}
+
+/* ===== FILTERS SECTION ===== */
+.filters-section {
+    background: var(--container-teal);
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 3px solid var(--brown-dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filters-section h3 {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--bg-sand);
+}
+
+.filters-section label {
+    color: var(--bg-sand);
+    font-size: 0.9rem;
+}
+
+.filters-section select {
+    background: var(--brown-dark);
+    border: 2px solid var(--brown-deep);
+    color: var(--bg-sand);
+    padding: 0.5rem;
+}
+
+.filters-section button {
+    background: transparent;
+    border: 2px solid var(--pop-peach);
+    color: var(--bg-sand);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.filters-section button:hover {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+}
+
+/* ===== VIEW TOGGLE ===== */
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.view-btn {
+    background: transparent;
+    border: 1px solid var(--brown-dark);
+    color: var(--brown-dark);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.view-btn.active {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+    border-color: var(--pop-peach);
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-section input {
+    flex: 1;
+    background: var(--container-teal);
+    border: 3px solid var(--brown-dark);
+    color: var(--bg-sand);
+    padding: 0.8rem;
+}
+
+.search-section input::placeholder {
+    color: var(--bg-sand);
+    opacity: 0.7;
+}
+
+.search-section input:focus {
+    border-color: var(--pop-peach);
+    outline: none;
+}
+
+.search-section button {
+    background: var(--pop-peach);
+    border: none;
+    color: var(--brown-deep);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: var(--container-teal);
+    border: 2px solid var(--brown-dark);
+    color: var(--bg-sand);
+    padding: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--bg-sand);
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--pop-peach);
+    outline: none;
+}
+
+/* ===== CART PAGE ===== */
+#cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    background: var(--container-teal);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--brown-dark);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    border: 2px solid var(--brown-dark);
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    color: var(--bg-sand);
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.quantity-control button {
+    background: transparent;
+    border: 2px solid var(--pop-peach);
+    color: var(--bg-sand);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+}
+
+.remove-btn {
+    background: transparent;
+    border: 2px solid #ff8a7a;
+    color: #ff8a7a;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #ff8a7a;
+    color: var(--brown-deep);
+}
+
+#cart-summary {
+    background: var(--container-teal);
+    padding: 1.5rem;
+    border: 2px solid var(--pop-peach);
+    height: fit-content;
+}
+
+#cart-summary h3 {
+    color: var(--bg-sand);
+    margin-bottom: 1rem;
+}
+
+#cart-summary p {
+    margin: 0.5rem 0;
+    color: var(--bg-sand);
+}
+
+#checkout-btn {
+    width: 100%;
+    background: var(--pop-peach);
+    border: none;
+    color: var(--brown-deep);
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ===== WISHLIST PAGE ===== */
+.wishlist-item {
+    display: flex;
+    background: var(--container-teal);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--brown-dark);
+}
+
+.wishlist-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+.wishlist-item-info {
+    flex: 1;
+}
+
+.wishlist-item-info h3 {
+    color: var(--bg-sand);
+}
+
+.wishlist-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.wishlist-actions button {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.wishlist-actions button:first-child {
+    background: var(--pop-peach);
+    border: none;
+    color: var(--brown-deep);
+}
+
+/* ===== RECEIPT PAGE ===== */
+.receipt-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.receipt-print {
+    background: var(--container-teal);
+    padding: 3rem;
+    border: 3px solid var(--pop-peach);
+    margin: 2rem 0;
+    box-shadow: 10px 10px 0 var(--shadow);
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.receipt-header .cheetah {
+    width: 60px;
+    height: auto;
+}
+
+.receipt-header h2 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: var(--bg-sand);
+}
+
+.receipt-header p {
+    color: var(--bg-sand);
+    opacity: 0.8;
+    letter-spacing: 4px;
+}
+
+.receipt-info {
+    background: var(--brown-dark);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--pop-peach);
+}
+
+.receipt-info p {
+    margin: 0.5rem 0;
+    color: var(--bg-sand);
+}
+
+.receipt-info span {
+    color: var(--pop-peach);
+    display: inline-block;
+    width: 100px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px dashed var(--bg-sand);
+    color: var(--bg-sand);
+}
+
+.receipt-totals {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--brown-dark);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    color: var(--bg-sand);
+}
+
+.grand-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--pop-peach);
+    color: var(--pop-peach);
+}
+
+.receipt-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--bg-sand);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.receipt-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.receipt-actions button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#print-receipt-btn {
+    background: transparent;
+    border: 2px solid var(--pop-peach);
+    color: var(--brown-deep);
+}
+
+#print-receipt-btn:hover {
+    background: var(--pop-peach);
+    color: var(--brown-deep);
+}
+
+#continue-shopping-btn {
+    background: var(--pop-peach);
+    border: none;
+    color: var(--brown-deep);
+}
+
+/* ===== EMPTY STATES ===== */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--container-teal);
+    border: 3px solid var(--brown-dark);
+}
+
+.empty-state p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--bg-sand);
+}
+
+/* ===== LOAFING CAT SPINNER ===== */
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--container-teal);
+    padding: 2rem;
+    border: 3px solid var(--pop-peach);
+    text-align: center;
+    z-index: 2000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0 var(--shadow);
+    min-width: 300px;
+}
+
+.loaf-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.loaf-cat {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(2px 2px 0 var(--brown-dark));
+    animation: loaf-breathe 3s infinite ease-in-out;
+}
+
+.loaf-shadow {
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    width: 100px;
+    height: 20px;
+    background: rgba(42, 27, 20, 0.2);
+    border-radius: 50%;
+    filter: blur(5px);
+    z-index: 1;
+    animation: shadow-pulse 3s infinite ease-in-out;
+}
+
+.loaf-text {
+    font-family: 'TT Fors', monospace;
+    color: var(--bg-sand);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.loaf-subtext {
+    font-family: 'TT Fors', monospace;
+    color: var(--bg-sand);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@keyframes loaf-breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+@keyframes shadow-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+/* ===== ERROR MESSAGES ===== */
+.error-message {
+    color: #ff8a7a;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== PRICE STYLING ===== */
+.price {
+    color: var(--pop-peach);
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link span:not(.badge) {
+        display: none;
+    }
+    
+    .carousel-slide {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .games-container.grid-view {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== RUNNING CHEETAH WIDE ===== */
+.cheetah-run-container {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0;
+    background: var(--container-teal);
+    border: 2px solid var(--pop-peach);
+    overflow: hidden;
+    box-shadow: 5px 5px 0 var(--shadow);
+}
+
+.running-cheetah-wide {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ABOUT CONTENT */
+.about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(78, 115, 109, 0.3);
+    border-left: 4px solid var(--pop-peach);
+    border-right: 4px solid var(--pop-peach);
+}
+
+.hidden {
+    display: none !important;
+}
+

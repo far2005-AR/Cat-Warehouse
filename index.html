@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat_Warehouse // grungy games for nightowls</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+        <!-- CRT SCANLINE EFFECT -->
+        <div class="crt-scanline"></div>
+
+        <!-- FIXED NAVIGATION BAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images:/cheetahlogo.png" alt="Cheetah sketch" class="cheetah-sketch">
+                    <span class="logo-text">Cat_Warehouse</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link active" data-page="home">HOME</a>
+                    <a href="#" class="nav-link" data-page="games">GAMES</a>
+                    <a href="#" class="nav-link" data-page="about">ABOUT</a>
+                    <a href="#" class="nav-link" data-page="cart">CART <span id="cart-badge" class="badge">0</span></a>
+                    <a href="#" class="nav-link" data-page="wishlist">WISHLIST <span id="wishlist-badge" class="badge">0</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTAINER -->
+        <main class="container">
+
+        <!-- HOME PAGE -->
+        <section id="home-page" class="page active">
+            <h1>// HOME</h1>
+            
+            <div class="hero-section">
+                <h2>> RECOMMENDED_GAMES</h2>
+                <div id="hero-carousel" class="carousel"></div>
+                <div class="carousel-controls">
+                    <button id="carousel-prev">← PREV</button>
+                    <button id="carousel-next">NEXT →</button>
+                </div>
+            </div>
+
+            <div class="recommended-section">
+                <h2>> ALL_RECOMMENDED</h2>
+                <div id="recommended-games" class="games-grid"></div>
+            </div>
+
+            <div class="newsletter-section">
+                <h2>> NEWSLETTER</h2>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="enter your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                    <div id="newsletter-error" class="error-message"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- GAMES PAGE -->
+        <section id="games-page" class="page">
+            <h1>> GAMES</h1>
+            
+            <div class="search-section">
+                <input type="text" id="search-input" placeholder="search games...">
+                <button id="search-btn">SEARCH</button>
+            </div>
+
+            <div class="filters-section">
+                <h3>// FILTERS</h3>
+                
+                <label>Category:</label>
+                <select id="category-filter">
+                    <option value="all">all categories</option>
+                    <option value="Action">Action</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Sandbox">Sandbox</option>
+                    <option value="Indie">Indie</option>
+                </select>
+
+                <label>Platform:</label>
+                <select id="platform-filter">
+                    <option value="all">all platforms</option>
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                </select>
+
+                <label>Price:</label>
+                <select id="price-filter">
+                    <option value="all">all prices</option>
+                    <option value="0-20">$0 - $20</option>
+                    <option value="20-40">$20 - $40</option>
+                    <option value="40-60">$40 - $60</option>
+                    <option value="60+">$60+</option>
+                </select>
+
+                <label>Sort:</label>
+                <select id="sort-filter">
+                    <option value="default">default</option>
+                    <option value="price-asc">price: low-high</option>
+                    <option value="price-desc">price: high-low</option>
+                    <option value="rating">rating</option>
+                    <option value="name">name a-z</option>
+                </select>
+
+                <button id="apply-filters">APPLY</button>
+                <button id="clear-filters">CLEAR</button>
+            </div>
+
+            <div class="view-toggle">
+                <button id="grid-view" class="view-btn active">GRID</button>
+                <button id="list-view" class="view-btn">LIST</button>
+            </div>
+
+            <div id="games-container" class="games-container grid-view"></div>
+        </section>
+
+        <!-- GAME DETAIL PAGE -->
+        <section id="game-detail-page" class="page">
+            <button id="back-to-games">← BACK</button>
+            <div id="game-detail-container"></div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="about-page" class="page">
+        <h1>> ORIGINS</h1>
+    
+        <!-- WIDE RUNNING CHEETAH - TOP -->
+        <div class="cheetah-run-container">
+            <img src="https://i.pinimg.com/originals/ea/75/1f/ea751f1731a8fd450c2b8248f744b6a8.gif" 
+                alt="Running cheetah" 
+                class="running-cheetah-wide">
+        </div>
+    
+        <div class="about-content">
+            <div class="about-header">
+                <img src="./images:/cheetahlogo.png" alt="Cheetah sketch" class="cheetah-sketch" style="width: 300px; display: block; margin: 0 auto;">
+                <h2>About Cat_Warehouse</h2>
+            </div>
+            <p>est. 2026 // a grungy little game store for the nightowls and ones who live on the fringes, thriving under the serene cover of night.</p>
+            <p>like our feline companions, we at Cat_Warehouse like teetering off the edges of high places we aren't supposed to be. we don't do corporate or clean. we do 
+                good games, fair prices, and bring all of the energy of your cat knocking stuff off your desk at inconvienient times.</p>
+            <p>🐆 similar to an abadoned warehouse sitting on a strech of barren grass, you can find us between the margins of the dark, in that quiet hour when the world 
+                sleeps and the games sigh in relief.</p>
+        </div>
+
+        <h2>> CONTACT US</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="contact-name" placeholder="your name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="contact-email" placeholder="your email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="contact-message" placeholder="your message" rows="4" required></textarea>
+            </div>
+            <button type="submit">SEND</button>
+            <div id="contact-error" class="error-message"></div>
+        </form>
+    </section>
+
+        <!-- CART PAGE -->
+        <section id="cart-page" class="page">
+            <h1>> CART</h1>
+            <div id="cart-container">
+                <div id="cart-items"></div>
+                <div id="cart-summary">
+                    <h3>// SUMMARY</h3>
+                    <p>subtotal: $<span id="cart-subtotal">0.00</span></p>
+                    <p>tax (13%): $<span id="cart-tax">0.00</span></p>
+                    <p><strong>total: $<span id="cart-total">0.00</span></strong></p>
+                    <button id="checkout-btn">CHECKOUT →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- WISHLIST PAGE -->
+        <section id="wishlist-page" class="page">
+            <h1>> WISHLIST</h1>
+            <div id="wishlist-items"></div>
+        </section>
+
+        <!-- CHECKOUT PAGE -->
+        <section id="checkout-page" class="page">
+            <h1>> CHECKOUT</h1>
+            
+            <form id="payment-form">
+                <h3>// PERSONAL</h3>
+                <input type="email" id="payment-email" placeholder="email address" required>
+
+                <h3>// PAYMENT</h3>
+                <input type="text" id="card-name" placeholder="name on card" required>
+                <input type="text" id="card-number" placeholder="card number (16 digits)" maxlength="16" required>
+                <div class="form-row">
+                    <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                    <input type="text" id="card-cvv" placeholder="CVV" maxlength="4" required>
+                </div>
+
+                <button type="submit" id="submit-payment">PLACE ORDER</button>
+                <div id="payment-error" class="error-message"></div>
+            </form>
+
+        <!-- LOADING SPINNER - LOAFING CAT -->
+        <div id="loading-spinner" class="spinner hidden">
+            <div class="loaf-container">
+                <img src="https://media.tenor.com/FYsjyvi3C7kAAAAj/rupert-cat.gif"
+                     alt="Cat loafing" 
+                     class="loaf-cat">
+                <div class="loaf-shadow"></div>
+            </div>
+            <p class="loaf-text">🐱 cat is loafing while we process your order...</p>
+            <p class="loaf-subtext">(he's very comfy, please don't rush him 🐆)</p>
+        </div>
+
+        <!-- RECEIPT PAGE -->
+        <section id="receipt-page" class="page">
+            <div class="receipt-container">
+                <h1>> RECEIPT</h1>
+                <div id="receipt-content"></div>
+                <div class="receipt-actions">
+                    <button id="print-receipt-btn">🖨️ PRINT PDF</button>
+                    <button id="continue-shopping-btn">← CONTINUE</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- BACKGROUND MUSIC - (REMEMBER THIS NIGHT BY COSMIC CYCLER) -->
+        <audio id="backrooms-music" loop>
+            <source src="backrooms.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- CONTROL RADIO -->
+        <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: rgba(78, 115, 109, 0.85); border: 2px solid #e5a985; padding: 12px; border-radius: 8px; backdrop-filter: blur(3px); cursor: pointer; transition: all 0.3s;" onclick="toggleVibe()" id="vibe-button">
+            <span style="color: #c3b9a0; font-family: 'TT Fors', monospace; font-size: 0.9rem; letter-spacing: 2px;">🌙 RADIO</span>
+            <span style="color: #e5a985; margin-left: 10px;">▶️</span>
+        </div>
+
+        <script>
+        const backroomsAudio = document.getElementById('backrooms-music');
+        const vibeButton = document.getElementById('vibe-button');
+        let isPlaying = false;
+    
+        // Volume
+        backroomsAudio.volume = 0.5;
+    
+        // Try autoplay 
+        backroomsAudio.play().then(() => {
+            isPlaying = true;
+            vibeButton.innerHTML = '<span style="color: #c3b9a0; font-family: \'TT Fors\', monospace; font-size: 0.9rem; letter-spacing: 2px;">🌙 RADIO</span><span style="color: #e5a985; margin-left: 10px;">⏸️</span>';
+        }).catch(() => {
+        console.log('Click the radio to start the vibe');
+        });
+    
+        function toggleVibe() {
+            if (isPlaying) {
+                backroomsAudio.pause();
+                vibeButton.innerHTML = '<span style="color: #c3b9a0; font-family: \'TT Fors\', monospace; font-size: 0.9rem; letter-spacing: 2px;">🌙 RADIO</span><span style="color: #e5a985; margin-left: 10px;">▶️</span>';
+            } else {
+                backroomsAudio.play();
+                vibeButton.innerHTML = '<span style="color: #c3b9a0; font-family: \'TT Fors\', monospace; font-size: 0.9rem; letter-spacing: 2px;">🌙 RADIO</span><span style="color: #e5a985; margin-left: 10px;">⏸️</span>';
+            }
+            isPlaying = !isPlaying;
+        }
+    
+        // Fade out when not hovering
+        vibeButton.addEventListener('mouseenter', () => vibeButton.style.opacity = '1');
+        vibeButton.addEventListener('mouseleave', () => vibeButton.style.opacity = '0.4');
+        vibeButton.style.opacity = '0.4';
+        vibeButton.style.transition = 'opacity 0.3s';
+        </script>
+
+        <!-- FLOATING DUST PARTICLES  -->
+        <script>
+        (function() {
+            console.log('🌫️ Adding visible dust particles...');
+        
+            // Create container for dust
+            const dustContainer = document.createElement('div');
+            dustContainer.style.position = 'fixed';
+            dustContainer.style.top = '0';
+            dustContainer.style.left = '0';
+            dustContainer.style.width = '100%';
+            dustContainer.style.height = '100%';
+            dustContainer.style.pointerEvents = 'none';
+            dustContainer.style.zIndex = '2';
+            document.body.appendChild(dustContainer);
+        
+            // Creating dust particles 
+            for (let i = 0; i < 85; i++) {
+                const dust = document.createElement('div');
+            
+                // Bigger size range 
+                const size = 2 + Math.random() * 4;
+            
+                // Random position
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+            
+                // Animation duration 
+                const duration = 8 + Math.random() * 12;
+            
+                const delay = Math.random() * 8;
+            
+                // Colours
+                const colors = ['#e5a985', '#c3b9a0', '#4e736d', '#494238'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+            
+                dust.style.position = 'absolute';
+                dust.style.width = size + 'px';
+                dust.style.height = size + 'px';
+                dust.style.background = color;
+                dust.style.borderRadius = '50%';
+                dust.style.opacity = '0.28';  
+                dust.style.left = left + '%';
+                dust.style.top = top + '%';
+                dust.style.boxShadow = '0 0 4px rgba(229, 169, 133, 0.2)';
+                dust.style.animation = `dust-drift ${duration}s linear infinite`;
+                dust.style.animationDelay = delay + 's';
+            
+                dustContainer.appendChild(dust);
+            }
+        
+            // keyframes
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes dust-drift {
+                    0% {
+                        transform: translate(0, 0) scale(1);
+                        opacity: 0.1;
+                    }
+                    20% {
+                        opacity: 0.35;
+                    }
+                    50% {
+                        transform: translate(30px, -50px) scale(1.3);
+                        opacity: 0.3;
+                    }
+                    80% {
+                        transform: translate(-20px, -80px) scale(0.9);
+                        opacity: 0.2;
+                    }
+                    100% {
+                        transform: translate(40px, -120px) scale(0.6);
+                        opacity: 0;
+                    }
+                }
+        `   ;
+            document.head.appendChild(style);
+        
+            console.log('🌫️ 85 dust particles floating');
+        })();
+        </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
