@@ -1,7 +1,7 @@
 /* ===== CUSTOM FONTS - LOCAL FILES ===== */
 @font-face {
     font-family: 'Montserrat';
-    src: url('./fonts:/montserrat.semibold.woff2') format('woff2');
+    src: url('./fonts/montserrat.semibold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -9,14 +9,14 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('./fonts:/montserrat.extrabold.woff2') format('woff2');
+    src: url('./fonts/montserrat.extrabold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Laquer';
-    src: url('./fonts:/Lacquer-Regular.woff2') format('woff2');
+    src: url('./fonts/Lacquer-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'TT Fors';
-    src: url('./fonts:/TT_Fors_Regular.woff2') format('woff2');
+    src: url('./fonts/TT_Fors_Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'TT Fors';
-    src: url('./fonts:/TT_Fors_Bold.woff2') format('woff2');
+    src: url('./fonts/TT_Fors_Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
